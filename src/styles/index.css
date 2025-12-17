@@ -1,11 +1,68 @@
-/* 
+body {
+  background: #f5f5f5;
+  font-family: "Helvetica", sans-serif;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+}
 
-*/
+.title {
+  font-size: 80px;
+  color: #ead7d7;
+  font-weight: 100;
+  margin-bottom: 20px;
+}
+
+.todo-box {
+  width: 500px;
+  background: white;
+  border-radius: 3px;
+}
+
+.todo-input {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  font-size: 20px;
+  position: relative;
+}
+
+.task-item:hover .delete-btn {
+  opacity: 1;
+}
+
+.delete-btn {
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.empty-msg {
+  padding: 20px;
+  text-align: center;
+  color: #999;
+}
+
+.task-count {
+  padding: 15px;
+  font-size: 14px;
+  color: #aaa;
+}
